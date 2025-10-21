@@ -1,5 +1,4 @@
 package jobsheet5;
-
 import java.util.Scanner;
 
 public class ifCetakKRS7 {
