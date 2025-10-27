@@ -9,7 +9,7 @@ public class Tugas1 {
 
         do {
             System.out.print("Masukkan jumlah tiket (ketik 'batal' silahkan masukkan lagi): ");
-            total
+            total;
 
             if (jumlahTiket > 10) {
                 diskon = 0.15;
