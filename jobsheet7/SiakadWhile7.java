@@ -17,7 +17,6 @@ public class SiakadWhile7 {
                 System.out.println("Nilai tidak valid. Masukkan lagi nilai yang valid!");
                 continue;
             }
-
             if (nilai > 80 && nilai <= 100) {
                 System.out.println("Nilai mahasiswa ke-" + (i + 1) + " adalah A");
             } else if( nilai > 73 && nilai <= 80) {
