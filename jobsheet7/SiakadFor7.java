@@ -16,6 +16,7 @@ public class SiakadFor7 {
                 terendah = nilai;
             }
         }
+        
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
     }
