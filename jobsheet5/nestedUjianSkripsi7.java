@@ -1,4 +1,5 @@
 package jobsheet5;
+
 import java.util.Scanner;
 
 public class nestedUjianSkripsi7 {
@@ -26,7 +27,7 @@ public class nestedUjianSkripsi7 {
                 pesan = "Gagal! Log bimbingan P2 belum mencapai 4 kali";
             }
         }else {
-            pesan = "gagal! mahasiswa masih memiliki kompen";
+            pesan = "Gagal! Mahasiswa masih memiliki kompen";
         }
         System.out.println(pesan);
         }
