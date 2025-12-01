@@ -32,7 +32,5 @@ public class SiakadFor7 {
         
         System.out.println("Jumlah mahasiswa lulus: " + jumlahLulus);
         System.out.println("Jumlah mahasiswa tidak lulus: " + jumlahTidakLulus);
-        
-        sc.close();
     }
 }
