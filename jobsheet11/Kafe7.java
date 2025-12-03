@@ -1,10 +1,18 @@
 package jobsheet11;
 public class Kafe7 {
-    public static void Menu(String namaPelanggan, boolean isMember) {
+    public static void Menu(String namaPelanggan, boolean isMember, String kodePromo) {
         System.out.println("Selamat datang, " + namaPelanggan + "!");
 
         if (isMember) {
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        }
+
+        if (kodePromo.equalsIgnoreCase("DISKON50")) {
+            System.out.println("Selamat! Anda mendapatkan DISKON 50%!");
+        } else if (kodePromo.equalsIgnoreCase("DISKON30")) {
+            System.out.println("Selamat! Anda mendapatkan DISKON 30%!");
+        } else if (!kodePromo.isEmpty()) {
+            System.out.println("Kode promo invalid atau tidak berlaku.");
         }
 
         System.out.println("==== MENU RESTO KAFE ====");
@@ -19,7 +27,7 @@ public class Kafe7 {
     }
 
     public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Budi", true, "DISKON30");
 
     }
 }
