@@ -12,5 +12,14 @@ public class OfflineCourse extends Course {
     public String getRoom() {
         return room;
     }
+
+    @Override
+    public int durationWeeks() {
+        return 10;
+    }
+
+    @Override
+    public String describe() {
+        return super.describe() + " [room " + room + "]";
+    }
 }
- 

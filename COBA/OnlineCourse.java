@@ -45,6 +45,11 @@ public class OnlineCourse extends Course {
         }
         this.code = code;
     }
+
+    public OnlineCourse(String code, String title, int year, Instructor instructor) {
+        this(code, title, year);
+        this.instructor = instructor;
+    }
  
     public String getCode() {
         // TODO Bantuan: kembalikan data yang disimpan constructor.
@@ -63,5 +68,15 @@ public class OnlineCourse extends Course {
     public void setInstructor(Instructor instructor) {
         this.instructor = instructor;
     }
+
+    @Override
+    public int durationWeeks() {
+        return 6;
+    }
+
+    @Override
+    public String describe() {
+        String instructorName = (instructor != null) ? instructor.getName() : "TBA";
+        return super.describe() + " by " + instructorName;
+    }
 }
- 
