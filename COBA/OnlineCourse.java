@@ -18,10 +18,10 @@ package COBA;
  */
 public class OnlineCourse {
  
-    public String code;
-    public String title;
-    public int year;
-    public boolean available;
+    private String code;
+    private String title;
+    private int year;
+    private boolean available;
  
     /**
      * Membuat kursus baru yang kursinya masih kosong (tersedia).
@@ -41,9 +41,12 @@ public class OnlineCourse {
         // Kerangka (Bagian 3): ganti dua baris title dan year dengan pemanggilan setter.
         //   setTitle(____);
         //   setYear(____);
+        if (code == null || code.trim().isEmpty()) {
+            throw new IllegalArgumentException("Kode kursus tidak boleh kosong");
+        }
         this.code = code;
-        this.title = title;
-        this.year = year;
+        setTitle(title);
+        setYear(year);
         this.available = true;
     }
  
@@ -117,7 +120,10 @@ public class OnlineCourse {
         //       throw new IllegalArgumentException("____");
         //   }
         //   this.title = title;
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (title == null || title.trim().isEmpty()) {
+            throw new IllegalArgumentException("Judul tidak boleh kosong");
+        }
+        this.title = title;
     }
  
     /**
@@ -132,7 +138,10 @@ public class OnlineCourse {
         //       throw new IllegalArgumentException("____");
         //   }
         //   this.year = year;
-        throw new UnsupportedOperationException("Not implemented yet");
+        if (year < 2015) {
+            throw new IllegalArgumentException("Tahun minimal 2015");
+        }
+        this.year = year;
     }
 }
  

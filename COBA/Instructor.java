@@ -1,5 +1,5 @@
 package COBA;
-
+ 
 /**
  * Bagian 2: pengajar kursus.
  *
@@ -15,8 +15,8 @@ package COBA;
  */
 public class Instructor {
  
-    public String name;
-    public String expertise;
+    private String name;
+    private String expertise;
  
     /** Membuat pengajar dengan nama dan bidang keahlian. */
     public Instructor(String name, String expertise) {
