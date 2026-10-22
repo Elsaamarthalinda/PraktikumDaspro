@@ -19,6 +19,7 @@ public class Student {
     private String studentId;
     private String name;
     private int courseCount = 0;
+    private StudentCard card;
  
     /**
      * Membuat mahasiswa yang belum mengambil kursus.
@@ -40,6 +41,7 @@ public class Student {
         }
         this.studentId = studentId;
         setName(name);
+        this.card = new StudentCard("SC-" + studentId);
     }
  
     public String getStudentId() {
@@ -70,6 +72,11 @@ public class Student {
     public int getCourseCount() {
         // TODO Bantuan: kembalikan jumlah kursus yang sedang diambil.
         return courseCount;
+    }
+ 
+    /** Bagian 4 (komposisi). Kartu mahasiswa yang dibuat di constructor. */
+    public StudentCard getCard() {
+        return card;
     }
  
     /** True jika mahasiswa masih boleh mengambil kursus (batasnya 3 kursus). */

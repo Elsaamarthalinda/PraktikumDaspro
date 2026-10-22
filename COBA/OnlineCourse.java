@@ -22,6 +22,7 @@ public class OnlineCourse {
     private String title;
     private int year;
     private boolean available;
+    private Instructor instructor;
  
     /**
      * Membuat kursus baru yang kursinya masih kosong (tersedia).
@@ -142,6 +143,16 @@ public class OnlineCourse {
             throw new IllegalArgumentException("Tahun minimal 2015");
         }
         this.year = year;
+    }
+ 
+    /** Bagian 4 (asosiasi). Pengajar kursus; null jika belum ada. */
+    public Instructor getInstructor() {
+        return instructor;
+    }
+ 
+    /** Bagian 4 (asosiasi). Mengatur pengajar; null melepas pengajar. */
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
     }
 }
  
